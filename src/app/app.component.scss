@@ -1,0 +1,71 @@
+.wrapper {
+  padding: 20px;
+  max-width: 905px;
+  margin: auto;
+}
+
+.header {
+  fieldset {
+    border: none;
+    margin: 0;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+  input {
+    width: 800px;
+  }
+
+  .image-set {
+    // display: flex;
+
+    img {
+      height: 70px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      transition: all .4s;
+
+      &:hover {
+        opacity: .6;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .originalimage-set, .ngx-faceavatar-set {
+    flex: 0;
+    min-width: 300px;
+  }
+
+  .originalimage-set img {
+    max-width: 300px;
+  }
+}
+
+.faceavatarsettings {
+  display: flex;
+  flex-direction: row;
+  margin: 10px -5px 60px;
+
+  label {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  input {
+    width: 100px;
+  }
+
+  input[type='checkbox'] {
+    width: 50px;
+  }
+}

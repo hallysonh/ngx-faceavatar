@@ -1,0 +1,23 @@
+{
+  "name": "ngx-faceavatar",
+  "version": "1.0.0",
+  "author": "Hallyson Almeida <hallysonh@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hallysonh/ngx-faceavatar"
+  },
+  "keywords": [
+    "avatar",
+    "angular",
+    "face",
+    "recognition",
+    "canvas",
+    "component"
+  ],
+  "homepage": "https://github.com/hallysonh/ngx-faceavatar#readme",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}

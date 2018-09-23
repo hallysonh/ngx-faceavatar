@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="image-set">
+      <img *ngFor="let img of images; let i = index" [src]="imagePath(img)" (click)="imageSrc = imagePath(img)" alt="Example image {{i + 1}}">
+    </div>
+
+    <fieldset>
+      <label>Image Url: </label>
+      <input type="text" [(ngModel)]="imageSrc">
+    </fieldset>
+
+    <fieldset>
+      <label>Image File: </label>
+      <input (change)="imageFile = $event.target.files[0]" accept="image/*" type="file">
+    </fieldset>
+
+    <div class="faceavatarsettings">
+      <label>Size:</label>
+      <input type="number" min="0" name="dim" [(ngModel)]="dim" required>
+      <label>Padding:</label>
+      <input type="number" min="0" name="padding" [(ngModel)]="padding" required>
+      <label>Rounded:</label>
+      <input type="checkbox" name="rounded" [(ngModel)]="rounded" required>
+    </div>
+  </div>
+  <div class="container">
+    <div class="originalimage-set">
+      <picture *ngIf="isValid()">
+        <figcaption>Original Image</figcaption>
+        <img [src]="safeImage" alt="Original Image" />
+      </picture>
+    </div>
+    <div class="ngx-faceavatar-set">
+      <label>Face Avatar</label>
+      <ngx-faceavatar [src]="imageSrc" [dim]="dim" [padding]="padding" [rounded]="rounded"></ngx-faceavatar>
+    </div>
+  </div>
+</div>
